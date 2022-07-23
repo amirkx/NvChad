@@ -135,17 +135,7 @@ M.gitsigns = function()
 
   require("base46").load_highlight "git"
 
-<<<<<<< HEAD
-  local options = {
-    signs = {
-      add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
-      change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
-      delete = { hl = "DiffDelete", text = "", numhl = "GitSignsDeleteNr" },
-      topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
-      changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
-    },
-  }
-=======
+
    local options = {
       signs = {
          add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr" },
@@ -224,7 +214,6 @@ M.gitsigns = function()
         map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
       end
    }
->>>>>>> 8cb341e (add default gitsign settings with subtle customization)
 
   options = load_override(options, "lewis6991/gitsigns.nvim")
   gitsigns.setup(options)
